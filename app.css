@@ -1,0 +1,379 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(to bottom, black,  rgb(71, 18, 18),  black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pre-intro {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-image: url('images/try20-pre-intro1.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#btn-start {
+  width: 300px;
+  height: 100px;
+  background-image: radial-gradient(gold, brown, black);
+  font-size: 3rem;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 100%;
+  background-image: url("./images/try2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: intro-fill; 
+  animation-delay: 3s;
+  animation-duration: 4s;
+}
+@keyframes intro-fill {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.intro h1 {
+    position: fixed;
+    width: 800px;
+    text-align: center;
+    font-size: 8rem;
+    left: calc(50% - 400px);
+    animation-name: h1Ani;
+    animation-duration: 7s;
+    filter: blur(100px);
+}
+@keyframes h1Ani{
+    0%{
+        display: block;
+        filter: blur(100px);
+        color: black;
+
+    }60% {
+        
+        filter: blur(0px);
+        color: red;
+    }100% {
+      filter: blur(0px);
+      color: red;
+    }
+}
+
+.intro img {
+  display: inline-block;
+  height: 100%;
+  border: 5px solid rgb(41, 24, 24);
+  object-fit: cover;
+  
+}
+
+#intro-hero {
+  width: 50vw;
+  animation-name: getInFromLeft;
+  animation-duration: 7.5s;
+  animation-fill-mode: ease;
+}
+@keyframes getInFromLeft {
+  0% {
+    width: 0vw;
+    
+  }
+  30% {
+
+    width: 50vw;
+    filter: blur(0px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(100px);
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+#intro-monster {
+  width: 50vw;
+  animation-name: getInFromLeft;
+  animation-duration: 7.5s;
+}
+
+.main-game {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.rotate-screen {
+  animation-name: animMe;
+  animation-duration: 1s;
+  filter: blur(0.5);
+  transform: rotate(0deg);
+}
+@keyframes animMe {
+  0% {
+    transform: rotate(0.5deg);
+  }
+  1% {
+    transform: rotate(-0.5deg);
+  }
+  2% {
+    transform: rotate(0.5deg);
+  }
+  3% {
+    transform: rotate(-0.5deg);
+  }
+  4% {
+    transform: rotate(0.5deg);
+  }
+  5% {
+    transform: rotate(-0.5deg);
+  }
+  6% {
+    transform: rotate(0.5deg);
+  }
+  7% {
+    transform: rotate(-0.5deg);
+  }
+  8% {
+    transform: rotate(0.5deg);
+  }
+  9% {
+    transform: rotate(-0.5deg);
+  }
+  10% {
+    transform: rotate(0.5deg);
+  }
+  11% {
+    transform: rotate(-0.5deg);
+  }
+  12% {
+    transform: rotate(0.5deg);
+  }
+  13% {
+    transform: rotate(-0.5deg);
+  }
+  14% {
+    transform: rotate(0.5deg);
+  }
+  15% {
+    transform: rotate(-0.5deg);
+  }
+  16% {
+    transform: rotate(0.5deg);
+  }
+  17% {
+    transform: rotate(-0.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.warrior-side, 
+.monster-side {
+  width: 30%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  border: 5px solid rgb(73, 15, 15);
+  border-radius: 50% 50% 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 3px 3px 10px 10px black;
+  font-family: fantasy;
+  text-shadow: 5px 5px 3px black;
+}
+
+.warrior-side {
+  margin: 10px 0px 0px 20px;
+  background-image: url('images/hero1.jpeg');
+  opacity: 1;
+}
+.monster-side {
+  margin: 10px 20px 0px 0px;
+  background-image: url('images/monster8.jpeg');
+}
+
+.warrior-side img {
+  object-position: 10px -100px;
+}
+
+.warrior-info,
+.monster-info {
+  color: white;
+  width: 100%;
+  padding: 16px;
+}
+
+.warrior-info h2,
+.monster-info h2 {
+  margin: 0;
+}
+
+.shared-side {
+  padding: 10px;
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  height: 550px;
+  padding: 20px;
+}
+
+.shared-side label {
+  margin: 10px 0 0 0;
+  font-size: 20px;
+}
+
+.shared-side progress {
+  width: 100%;
+  height: 80px;
+  color: red;
+}
+
+.standard-attacks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#attack {
+  color: grey;
+  background-image: url('images/attack.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -30px 0px;
+}
+
+#defence {
+  color: grey;
+  background-image: url('images/defence.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 0px;
+}
+
+.special-attacks {
+  margin: 20px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.standard-attacks button,
+.special-attacks button {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  padding: 0;
+  box-shadow: 5px 5px 7px 5px rgb(0, 0, 0);
+}
+
+.dead-button {
+  opacity: 0.3;
+}
+
+#slay {
+  color: firebrick;
+  background-image: url('images/slay_sword.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -60px 0px;
+}
+#shield {
+  color: firebrick;
+  background-image: url('images/shield_of_hercules.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 0px;
+}
+#heal {
+  color:firebrick;
+  background-image: url('images/power_of_healing.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -54px 0px;
+}
+
+button h3 {
+  text-shadow: 4px 5px 6px black;
+  background-image: linear-gradient(to bottom, black, rgb(75, 18, 18), black);
+  padding: 3px 0px;
+}
+
+.hover-me:hover {
+  box-shadow: 2px 0px 10px 1px rgb(255, 0, 0);
+}
+
+.announceWinner {
+  background-color: rgba(0, 0, 0, 0.473);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(180, 0, 0);
+  text-shadow: 3px 4px 5px white;
+  font-size: 150px;
+  letter-spacing: 3px;
+  
+}
+
+.visibleHide {
+  visibility: hidden;
+}
+
+.startGame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  width: 250px;
+  height: 80px;
+  font-size: 40px;
+  background-image: radial-gradient(rgb(50, 115, 246), black);
+  box-shadow: 0px 0px 10px 2px rgb(54, 54, 54);
+  display: none;
+}
+
+.startGame:hover {
+  color: white;
+  box-shadow: 0px 0px 10px 2px white;
+}
+
+.blackAndWhite {
+  filter: grayscale(100%);
+}

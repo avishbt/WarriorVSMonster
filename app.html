@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="app.css" />
+    <title>Warrior Vs Monster 2</title>
+  </head>
+  <body>
+    <div class="pre-intro">
+      <button id="btn-start">PLAY</button>
+    </div>
+
+    <div class="intro">
+      <img id="intro-hero" src="./images/hero1.jpeg" alt="" />
+      <img id="intro-monster" src="./images/monster8.jpeg" alt="" />
+      <h1 id="title">WARRIOR VS MONSTER</h1>
+    </div> 
+
+    <div class="main-game">
+      <div class="warrior-side">
+        <div class="warrior-info">
+          <h2 id="warrior-health-points"></h2>
+          <h2 id="warrior-attack-points"></h2>
+          <h2 id="warrior-defence-points"></h2>
+          <h2 id="warrior-attacks-number"></h2>
+          <h2 id="warrior-damage"></h2>
+          <h2 id="warrior-healing"></h2>
+        </div>
+      </div>
+
+      <div class="shared-side">
+        <label for="warrior-life">Warrior's Life</label>
+        <progress id="warrior-life" value="100" max="100"></progress>
+        <label for="monster-life">Monster's Life</label>
+        <progress id="monster-life" value="100" max="100"></progress>
+
+        <div class="standard-attacks">
+          <button class="hover-me" id="attack">
+            <h3>ATTACK</h3>
+          </button>
+          <button class="hover-me" id="defence">
+            <h3>DEFENCE</h3>
+          </button>
+        </div>
+
+        <div class="special-attacks">
+          <button class="hover-me" id="slay">
+            <h3>SLAY</h3>
+          </button>
+          <button class="hover-me" id="shield">
+            <h3>SHIELD</h3>
+          </button>
+          <button class="hover-me" id="heal">
+            <h3>HEAL</h3>
+          </button>
+        </div>
+      </div>
+
+      <div class="monster-side">
+        <div class="monster-info">
+          <h2 id="monster-health-points"></h2>
+          <h2 id="monster-attack-points"></h2>
+          <h2 id="monster-defence-points"></h2>
+          <h2 id="monster-attacks-number"></h2>
+          <h2 id="monster-damage"></h2>
+          <h2 id="monster-healing"></h2>
+        </div>
+      </div>
+    </div>
+
+    <button class="startGame">RESTART</button>
+    <h1 class="announceWinner visibleHide"></h1>
+  </body>
+</html>
